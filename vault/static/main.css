@@ -1,6 +1,7 @@
 body {
     text-align: center;
     background-color:DarkSlateGrey;
+    margin: 20px;
 }
 
 .title {
@@ -23,4 +24,9 @@ a.button {
     appearance: button;
     text-decoration: none;
     color: initial;
+}
+
+.error {
+    font-size: 18px;
+    color: #8B0000;
 }

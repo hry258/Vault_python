@@ -1,7 +1,14 @@
-{% extends './base.html' %}
 {% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vault</title>
+    <link rel="stylesheet" href="{% static 'main.css' %}">
+</head>
+<body>
 
-{% block content %}
+<h1 class="title">Personal cloud server</h1>
 
 <h2>Login:</h2>
 <form method="post" id="login_form">
@@ -17,4 +24,5 @@
 <button type="submit" form="login_form">Login</button>
 <button type="submit" form="go_to_signup_form">Sign up</button>
 
-{% endblock content %}
+</body>
+</html>

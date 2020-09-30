@@ -14,27 +14,11 @@ def signup(request):
             form.save()
             username = form.cleaned_data.get('username')
             raw_password = form.cleaned_data.get('password1')
-            user = authenticate(username=username, password=raw_password)
+            authenticate(username=username, password=raw_password)
             return redirect('home')
     else:
         form = SignUpForm()
     return render(request, 'signup.html', {'form': form})
-
-
-# def login(request):
-#     if request.method == 'POST':
-#         form = LoginForm(request.POST)
-#         if form.is_valid():
-#             username = form.cleaned_data.get('username')
-#             raw_password = form.cleaned_data.get('password')
-#             user = authenticate(username=username, password=raw_password)
-#             return redirect('home')
-#     else:
-#         form = LoginForm()
-#     return render(request, 'login.html', {'form': form})
-
-# def logout(request):
-#     return redirect("login")
 
 @login_required(login_url='login')
 def home(request):
