@@ -26,7 +26,38 @@ a.button {
     color: initial;
 }
 
+a {
+    color: white;
+}
+
 .error {
     font-size: 18px;
     color: #8B0000;
+}
+
+#tabs ul {
+    list-style-type: none;
+    text-align:center;
+    border: 1px solid #555;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    display: block
+}
+
+#tabs li {
+    float: left;
+	border-right: 1px solid #bbb;
+}
+
+#tabs li:hover {
+    background-color: gray;
+}
+
+#tabs li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
 }

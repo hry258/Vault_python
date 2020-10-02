@@ -28,4 +28,5 @@ urlpatterns = [
     path('logout/', auth_views.LogoutView.as_view(), {'next_page': settings.LOGOUT_REDIRECT_URL}, name='logout'),
     path('upload_photo/', user_views.upload_photo, name="upload_photo"),
     path('photos/', user_views.view_photos, name="photos"),
+    path('profile/', user_views.profile, name="profile"),
 ]

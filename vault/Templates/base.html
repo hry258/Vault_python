@@ -8,6 +8,23 @@
 </head>
 <body>
 
+<div id="tabs">
+    <ul>
+        <li>
+            <a href="{% url 'home' %}">Home</a>
+        </li>
+        <li>
+            <a href="{% url 'photos' %}">Photos</a>
+        </li>
+        <li>
+            <a href="{% url 'profile' %}">Profile</a>
+        </li>
+        <li>
+            <a href="{% url 'logout' %}">Logout</a>
+        </li>
+    </ul>
+</div>
+
 {% block content %}
 {% endblock content %}
 

@@ -53,3 +53,7 @@ def view_photos(request):
     user = User.objects.get(username=request.user.username)
     user_extended = UserExtended.objects.get(username=user.id)
     return render(request, 'photos.html', {"user_extended": user_extended})
+
+@login_required(login_url='login')
+def profile(request):
+    return render(request, 'profile.html', {})
