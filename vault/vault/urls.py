@@ -19,7 +19,6 @@ from django.contrib.auth import views as auth_views
 
 from vault import settings
 from user import views as user_views
-# from files import views as files_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -27,4 +26,6 @@ urlpatterns = [
     path('signup/', user_views.signup, name='signup'),
     path('login/', auth_views.LoginView.as_view(template_name="login.html"), name='login'),
     path('logout/', auth_views.LogoutView.as_view(), {'next_page': settings.LOGOUT_REDIRECT_URL}, name='logout'),
+    path('upload_photo/', user_views.upload_photo, name="upload_photo"),
+    path('photos/', user_views.view_photos, name="photos"),
 ]

@@ -11,5 +11,8 @@ class UserExtended(models.Model):
     picture = models.ImageField(null=True, blank=True, upload_to='avatar_photos/', default="default-avatar.png")
 
 class Photo(models.Model):
-    photo = models.ImageField(null=True, blank=True, upload_to='avatar_photos/', default="default-avatar.png")
+    photo = models.ImageField(upload_to='images/')
+    title = models.CharField(null=True, blank=True, max_length=30, default="Photo")
+    description = models.TextField(null=True, blank=True)
     photo_id = models.ForeignKey(UserExtended, on_delete=models.CASCADE, null=True, blank=True)
+    date = models.DateField(null=True, blank=True)
