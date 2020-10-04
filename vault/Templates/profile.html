@@ -3,6 +3,40 @@
 
 {% block content %}
 
-<label>profile.html</label>
+<h1 class="title">Profile:</h1>
+
+<img src="{% static user_extended.picture.url %}">
+
+<div class="profile">
+    <table align="center" cellspacing="10">
+        <tr><td>Username:</td><td>{{user_extended.username}}</td></tr>
+        <tr>
+            <td>First name:</td>
+            {% if user_extended.first_name %}
+            <td>{{user_extended.first_name}}</td>
+            {% else %}
+            <td>Not set</td>
+            {% endif %}
+        </tr>
+        <tr>
+            <td>Last name:</td>
+            {% if user_extended.last_name %}
+            <td>{{user_extended.last_name}}</td>
+            {% else %}
+            <td>Not set</td>
+            {% endif %}
+        </tr>
+        <tr>
+            <td>Email:</td>
+            {% if user_extended.email %}
+            <td>{{user_extended.email}}</td>
+            {% else %}
+            <td>Not set</td>
+            {% endif %}
+        </tr>
+    </table>
+</div>
+
+<h3><a href="{% url 'profile' %}">Edit profile</a></h3>
 
 {% endblock content %}

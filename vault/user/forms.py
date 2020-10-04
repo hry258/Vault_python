@@ -17,4 +17,4 @@ class LoginForm(forms.Form):
 class UploadPhotoForm(forms.ModelForm):
     class Meta:
         model = Photo
-        fields = ['photo', 'title', 'description', 'date']
+        fields = ['photo', 'title', 'description']

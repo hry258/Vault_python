@@ -10,17 +10,17 @@
 
 <div id="tabs">
     <ul>
-        <li>
+        <li class="li-left">
             <a href="{% url 'home' %}">Home</a>
         </li>
-        <li>
+        <li class="li-left">
             <a href="{% url 'photos' %}">Photos</a>
         </li>
-        <li>
-            <a href="{% url 'profile' %}">Profile</a>
-        </li>
-        <li>
+        <li class="li-right">
             <a href="{% url 'logout' %}">Logout</a>
+        </li>
+        <li class="li-right">
+            <a href="{% url 'profile' %}">Profile</a>
         </li>
     </ul>
 </div>

@@ -29,4 +29,5 @@ urlpatterns = [
     path('upload_photo/', user_views.upload_photo, name="upload_photo"),
     path('photos/', user_views.view_photos, name="photos"),
     path('profile/', user_views.profile, name="profile"),
+    # path('edit_profile', user_views.edit_profile, name="edit_profile"),
 ]

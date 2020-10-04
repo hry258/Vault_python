@@ -3,6 +3,20 @@
 
 {% block content %}
 
-<a href="{% url 'upload_photo' %}">Upload photo</a>
+<h1 class="title">Photos:</h1>
+
+{% if user_photos %}
+    <div class="photos">
+        <table align="center">
+            {% for image in user_photos %}
+                <tr><td><img src="{% static image.photo.url %}"></td></tr>
+                <tr><td>{{ image.title }}</td></tr>
+            {% endfor %}
+            <tr><td><a href="{% url 'upload_photo' %}">Upload more photos</a></td></tr>
+        </table>
+    </div>
+{% else %}
+    <h3>No photos uploaded. <a href="{% url 'upload_photo' %}">Upload here.</a></h3>
+{% endif %}
 
 {% endblock content %}

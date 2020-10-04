@@ -2,10 +2,18 @@ body {
     text-align: center;
     background-color:DarkSlateGrey;
     margin: 20px;
+    color: white;
+    text-shadow:
+       1px 1px 0 #000,
+       -1px -1px 0 #000,
+       1px -1px 0 #000,
+       -1px 1px 0 #000,
+       1px 1px 0 #000;
 }
 
 .title {
     padding: 20px;
+    color: white;
 }
 
 .login{
@@ -42,12 +50,18 @@ a {
     padding: 0;
     overflow: hidden;
     background-color: #333;
-    display: block
+    display: block;
+    font-size: 20px;
 }
 
-#tabs li {
+.li-left {
     float: left;
 	border-right: 1px solid #bbb;
+}
+
+.li-right {
+    float: right;
+	border-left: 1px solid #bbb;
 }
 
 #tabs li:hover {
@@ -60,4 +74,21 @@ a {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+}
+
+.photos {
+    border: 2px solid;
+    margin: auto;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    border-spacing: 5px;
+}
+
+.profile {
+    font-size: 25px;
+    font-weight: bold;
+    padding: 20px;
+    text-align: left;
 }
