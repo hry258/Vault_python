@@ -3,6 +3,29 @@
 
 {% block content %}
 
+<h1 class="title">Edit profile:</h1>
 
+<form method="get" id="go_to_profile_form" action="/profile"></form>
+<form method="post" class="profile" id="edit_profile_form">
+    {% csrf_token %}
+    <table align="center" cellspacing="10">
+        <tr><td>Username:</td><td>{{ user_extended.username }}</td></tr>
+        <tr><td>Email:</td><td>{{ user_extended.email }}</td></tr>
+        {% for field in form %}
+        <tr><td>{{ field.label_tag }}</td><td>{{ field }}</td></tr>
+        {% endfor %}
+    </table>
+    <br>
+    <div align="center">
+        <button type="submit" form="edit_profile_form">Submit</button>
+        <button type="submit" form="go_to_profile_form">Back to profile</button>
+        <h3 style="font-size: 20px;">*Username and email can't be changed.</h3>
+    </div>
+    {% for field in form %}
+        {% for error in field.errors %}
+            <p class="error">{{ error }}</p>
+        {% endfor %}
+    {% endfor %}
+</form>
 
 {% endblock content %}

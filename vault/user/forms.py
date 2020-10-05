@@ -1,8 +1,7 @@
 from django import forms
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
-
-from .models import Photo
+from .models import Photo, UserExtended
 
 class SignUpForm(UserCreationForm):
     email = forms.EmailField(max_length=254, help_text='Required. Inform a valid email address.')
@@ -18,3 +17,8 @@ class UploadPhotoForm(forms.ModelForm):
     class Meta:
         model = Photo
         fields = ['photo', 'title', 'description']
+
+class EditProfileForm(forms.ModelForm):
+    class Meta:
+        model = UserExtended
+        fields = ['picture', 'first_name', 'last_name']

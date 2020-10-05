@@ -1,0 +1,25 @@
+{% extends './base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div align="center">
+    <br><br><br>
+    <img src="{% static image.photo.url %}">
+    <h1 class="title">{{ image.title }}</h1>
+    <p class="photo">{{ image.description }}</p>
+    <h3>
+        <table style="border-spacing: 50px 0;">
+            <tr>
+                <td>
+                    <a href="{% url 'edit_photo' image.id %}">Edit photo</a>
+                </td>
+                <td>
+                    <a href="{% url 'delete_photo' image.id %}">Delete photo</a>
+                </td>
+            </tr>
+        </table>
+    </h3>
+</div>
+
+{% endblock content %}

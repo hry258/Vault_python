@@ -3,15 +3,25 @@
 
 {% block content %}
 
-<form method="post" enctype="multipart/form-data">
+<h1 class="title">Upload photo:</h1>
+
+<form method="post" enctype="multipart/form-data" class="profile">
     {% csrf_token %}
-    <table align="center">
+    <table align="center" cellspacing="10">
     {% for field in form %}
         <tr><td>{{ field.label_tag }}</td><td align="left">{{ field }}</td></tr>
     {% endfor %}
     </table>
-    <button type="submit">Submit</button>
+    <div align="center">
+        <button type="submit">Submit</button>
+    </div>
+    <br>
+    {% for field in form %}
+        {% for error in field.errors %}
+            <p class="error">{{ error }}</p>
+        {% endfor %}
+    {% endfor %}
 </form>
-{{ upload_message }}
+<label class="message">{{ upload_message }}</label>
 
 {% endblock content %}

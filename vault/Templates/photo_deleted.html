@@ -1,0 +1,12 @@
+{% extends './base.html' %}
+{% load static %}
+
+{% block content %}
+
+{% if message %}
+<h1 class="title">{{ message }}</h1>
+{% else %}
+<h1 class="title">Photo deleted.</h1>
+{% endif %}
+
+{% endblock content %}

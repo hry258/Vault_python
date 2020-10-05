@@ -6,17 +6,23 @@
 <h1 class="title">Photos:</h1>
 
 {% if user_photos %}
-    <div class="photos">
-        <table align="center">
-            {% for image in user_photos %}
-                <tr><td><img src="{% static image.photo.url %}"></td></tr>
-                <tr><td>{{ image.title }}</td></tr>
-            {% endfor %}
-            <tr><td><a href="{% url 'upload_photo' %}">Upload more photos</a></td></tr>
-        </table>
-    </div>
+
+<div class="photos">
+    <table align="center">
+        {% for image in user_photos %}
+            <tr><td><img src="{% static image.photo.url %}"></td></tr>
+            <tr><td><a href="{% url 'photo_details' image.id %}">{{ image.title }}</a></td></tr>
+        {% endfor %}
+        <tr><td></td></tr>
+    </table>
+</div>
+<br><br>
+<a href="{% url 'upload_photo' %}" class="message">Upload more photos</a>
+
 {% else %}
-    <h3>No photos uploaded. <a href="{% url 'upload_photo' %}">Upload here.</a></h3>
+
+<h3>No photos uploaded. <a href="{% url 'upload_photo' %}">Upload here.</a></h3>
+
 {% endif %}
 
 {% endblock content %}

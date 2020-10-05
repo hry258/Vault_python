@@ -2,7 +2,7 @@ body {
     text-align: center;
     background-color:DarkSlateGrey;
     margin: 20px;
-    color: white;
+    color: #E0E0E0;
     text-shadow:
        1px 1px 0 #000,
        -1px -1px 0 #000,
@@ -13,7 +13,7 @@ body {
 
 .title {
     padding: 20px;
-    color: white;
+    color: #E0E0E0;
 }
 
 .login{
@@ -35,12 +35,12 @@ a.button {
 }
 
 a {
-    color: white;
+    color: #E0E0E0;
 }
 
 .error {
     font-size: 18px;
-    color: #8B0000;
+    color: red;
 }
 
 #tabs ul {
@@ -70,14 +70,13 @@ a {
 
 #tabs li a {
     display: block;
-    color: white;
+    color: #E0E0E0;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
 }
 
 .photos {
-    border: 2px solid;
     margin: auto;
     padding: 10px;
     font-size: 20px;
@@ -91,4 +90,23 @@ a {
     font-weight: bold;
     padding: 20px;
     text-align: left;
+}
+
+.message {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.photo{
+    border: 2px solid;
+    margin-left: 700px;
+    margin-right: 700px;
+    padding: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    border-spacing: 10px;
+    height: auto;
+    word-break: break-all;
 }

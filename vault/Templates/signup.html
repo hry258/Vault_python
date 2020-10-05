@@ -17,7 +17,6 @@
     <table class="login">
     {% for field in form %}
         <tr><td>{{ field.label_tag }}</td><td>{{ field }}</td></tr>
-        <label>{{ field.error }}</label>
     {% endfor %}
     </table>
     <br>
